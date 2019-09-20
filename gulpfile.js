@@ -1,6 +1,7 @@
 var gulp = require('gulp');
 var browserSync = require('browser-sync').create();
-var less = require('gulp-less');
+// var less = require('gulp-less');
+var sass = require('gulp-sass');
 var pug = require('gulp-pug');
 var plumber = require('gulp-plumber');
 var notify = require('gulp-notify');
@@ -32,7 +33,7 @@ gulp.task('server', function() {
 		gulp.start('pug');
 	});
 
-	watch('./src/less/**/*.less', function(){
+	watch('./src/sass/**/*.scss', function(){
 		gulp.start('styles');
 	});
 
@@ -59,8 +60,17 @@ gulp.task('server:docs', function() {
 	});
 });
 
+
+// gulp.task('sass', function() {
+//     return gulp.src('./app/sass/**/*.scss')
+//     .pipe(sass())
+//     .pipe(gulp.dest('./app/css'))
+//     .pipe(browserSync.stream());
+// });
+
+
 gulp.task('styles', function() {
-	return gulp.src('./src/less/main.less')
+	return gulp.src('./src/sass/main.scss')
 	.pipe(plumber({
 		errorHandler: notify.onError(function(err){
 			return {
@@ -71,7 +81,7 @@ gulp.task('styles', function() {
 		})
 	}))
 	.pipe(sourcemaps.init())
-	.pipe(less())
+	.pipe(sass())
 	.pipe(autoprefixer({
 		browsers: ['last 6 versions'],
 		cascade: false
@@ -80,6 +90,9 @@ gulp.task('styles', function() {
 	.pipe(gulp.dest('./build/css'))
 	.pipe(browserSync.stream());
 });
+
+
+
 
 gulp.task('pug', function() {
 	// return gulp.src('./src/pug/pages/**/*.pug')

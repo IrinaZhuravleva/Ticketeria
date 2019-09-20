@@ -1,0 +1,135 @@
+
+/*==========  Desktop First  ==========*/
+@media only screen and (max-width : 1800px) {
+	.tic-box {
+	    width: 1420px;
+	}
+}
+
+@media only screen and (max-width : 1440px) {
+	.tic-box {
+		width: 1004px;
+	}
+}
+
+@media only screen and (max-width : 1024px) {
+	.tic-box {
+		width: 748px;
+	}
+    .address-wrapper {
+        // width: 100%;
+        justify-content: space-between;
+    }
+    .search {
+		margin-left: 0;
+		margin-right: 40px;
+		&::before {
+			left: 180px;
+		}
+	}
+}
+
+@media only screen and (max-width : 768px) {
+	.tic-box {
+		width: 620px;
+	}
+	.burger-menu img {
+	    display: block;
+	    margin-left: 20px;
+	}
+	ul.hidden-md {
+		display: none;
+	}
+	.sub-menu {
+    	justify-content: flex-end;
+	    min-height: 50px;
+	}
+	ul.address-wrapper {
+		min-height: 50px;
+	}
+	.events {
+		display: none;
+	}
+	.logo {
+		position: absolute;
+	    width: 140px;
+	    height: 28px;
+	    top: -37px;
+    	left: 0px;
+	    background-size: 100%;
+	    background-color: transparent;
+	}
+	.sub-menu-wrapper {
+	    background-color: #ffffff;
+	}
+	.hidden-bg {
+		display: block;
+	}
+	.hidden-md {
+		display: none;
+	}
+	.address-wrapper {
+		width: 100%;
+		display: flex;
+		justify-content: space-between;
+	}
+	.sub-menu-wrapper {
+	    background-color: #ffffff;
+	}
+	.address-wrapper {
+	    padding: 10px 10px 0;
+	}
+	.sub-menu li img {
+		display: none;
+	}
+}
+
+@media only screen and (max-width : 640px) {
+	.tic-box {
+		width: 300px;
+	}
+	.logo {
+	    width: 21px;
+	    height: 28px;
+	    
+	    background-image: url(../img/logo-mob.svg);
+	}
+	.hidden-sm{
+		display: none;
+	}
+	.sub-menu li img {
+		display: block;
+	}
+
+	.menu-logo ul {
+		
+		flex-direction: column-reverse;
+	}
+
+	ul.address-wrapper {
+		padding-top: 0px;
+		align-items: flex-start;
+		li {
+			padding-bottom: 15px;
+			&:last-child {
+			    margin-left: 33px;
+			}
+		}
+	}
+	.search {
+		margin-top: 3px;
+	    margin-left: 30px;
+	    &::before {
+	        left: -30px;
+		}
+	}
+	.sub-menu {
+		align-items: center;
+	}
+	.sub-menu__item::before {
+		display: none;
+	}
+	.address {
+		margin-top: 15px;
+	}
+}

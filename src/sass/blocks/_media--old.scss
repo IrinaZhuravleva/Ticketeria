@@ -15,13 +15,13 @@
 }
 
 @media only screen and (max-width : 768px) {
-	.main-navigation-wrapper_desc {
-	    display: none;
-	}
-	.main-navigation-wrapper_mob {
-		display: block;
-		align-items: center;
-	}
+	// .main-navigation-wrapper_desc {
+	//     display: none;
+	// }
+	// .main-navigation-wrapper_mob {
+	// 	display: block;
+	// 	align-items: center;
+	// }
 	.sub-menu-wrapper {
 	    background-color: #ffffff;
 	}
@@ -31,12 +31,12 @@
 }
 
 @media only screen and (max-width : 640px) {
-	.main-navigation-wrapper_mob {
-	    display: none;
-	}
-	.main-navigation-wrapper_mob-xs {
-	    display: block;
-	}
+	// .main-navigation-wrapper_mob {
+	//     display: none;
+	// }
+	// .main-navigation-wrapper_mob-xs {
+	//     display: block;
+	// }
 	.address-wrapper {
 		padding-top: 0px;
 		flex-direction: column-reverse;
