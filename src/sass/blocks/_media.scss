@@ -1,21 +1,21 @@
 
 /*==========  Desktop First  ==========*/
 @media only screen and (max-width : 1800px) {
-	.tic-box {
-	    width: 1420px;
-	}
+	// .tic-box {
+	//     width: 1420px;
+	// }
 }
 
 @media only screen and (max-width : 1440px) {
-	.tic-box {
-		width: 1004px;
-	}
+	// .tic-box {
+	// 	width: 1004px;
+	// }
 }
 
 @media only screen and (max-width : 1024px) {
-	.tic-box {
-		width: 748px;
-	}
+	// .tic-box {
+	// 	width: 748px;
+	// }
     .address-wrapper {
         // width: 100%;
         justify-content: space-between;
@@ -30,9 +30,9 @@
 }
 
 @media only screen and (max-width : 768px) {
-	.tic-box {
-		width: 620px;
-	}
+	// .tic-box {
+	// 	width: 620px;
+	// }
 	.burger-menu img {
 	    display: block;
 	    margin-left: 20px;
@@ -55,7 +55,7 @@
 	    width: 140px;
 	    height: 28px;
 	    top: -37px;
-    	left: 0px;
+    	left: 10px;
 	    background-size: 100%;
 	    background-color: transparent;
 	}
@@ -85,13 +85,12 @@
 }
 
 @media only screen and (max-width : 640px) {
-	.tic-box {
-		width: 300px;
-	}
+	// .tic-box {
+	// 	width: 300px;
+	// }
 	.logo {
 	    width: 21px;
 	    height: 28px;
-	    
 	    background-image: url(../img/logo-mob.svg);
 	}
 	.hidden-sm{
@@ -100,12 +99,9 @@
 	.sub-menu li img {
 		display: block;
 	}
-
-	.menu-logo ul {
-		
+	.menu-logo ul {	
 		flex-direction: column-reverse;
 	}
-
 	ul.address-wrapper {
 		padding-top: 0px;
 		align-items: flex-start;

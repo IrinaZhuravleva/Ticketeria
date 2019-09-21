@@ -54,11 +54,11 @@ gulp.task('server', function() {
 	});
 });
 
-gulp.task('server:docs', function() {
-	browserSync.init({
-		server: { baseDir: './docs/'}
-	});
-});
+// gulp.task('server:docs', function() {
+// 	browserSync.init({
+// 		server: { baseDir: './docs/'}
+// 	});
+// });
 
 
 // gulp.task('sass', function() {
@@ -70,7 +70,7 @@ gulp.task('server:docs', function() {
 
 
 gulp.task('styles', function() {
-	return gulp.src('./src/sass/main.scss')
+	return gulp.src('./src/sass/*.scss')
 	.pipe(plumber({
 		errorHandler: notify.onError(function(err){
 			return {
