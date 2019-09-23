@@ -29,6 +29,7 @@ nav {
 .tic-box {
   width: 100%;
   padding: 0 10px;
+  box-sizing: border-box;
 }
 
 .hidden-bg {
@@ -46,35 +47,36 @@ nav {
 }
 
 .sub-menu > ul {
-    min-height: 26px;
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: flex-end;
-    font-size: 14px;
-    color:#121314;
-    font-weight: 500;
+  min-height: 26px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-end;
+  font-size: 14px;
+  color:#121314;
+  font-weight: 500;
 	font-style: normal;
 }
 
 .sub-menu > ul > li {
-    &:nth-of-type(2) {
-        margin: 0 20px;
-    }
-    &.map {
-        position: relative;
-        margin-left: 20px;
-        &::before {
-            content: "";
-            width: 16px;
-            height: 10.48px;
-            position: absolute;
-            top: 0;
-            left: -22px;
-            background-image: url(../img/map.svg);
-            background-position: center;
-            background-repeat: no-repeat;
-        }
+  cursor: pointer;
+  &:nth-of-type(2) {
+    margin: 0 20px;
+  }
+  &.map {
+    position: relative;
+    margin-left: 20px;
+    &::before {
+        content: "";
+        width: 16px;
+        height: 10.48px;
+        position: absolute;
+        top: 0;
+        left: -22px;
+        background-image: url(../img/map.svg);
+        background-position: center;
+        background-repeat: no-repeat;
+      }
     }
     &.lang {
         position: relative;
@@ -92,6 +94,10 @@ nav {
     }
 }
 
+.sub-menu ul:nth-of-type(2) > li:nth-of-type(2) {
+  cursor: default;
+}
+
 .burger-menu img {
     display: none;
 }
@@ -99,6 +105,7 @@ nav {
 .menu-logo {
     position: relative;
     padding-top: 15px;
+    min-height: 58px;
 }
 
 .logo {
@@ -109,6 +116,9 @@ nav {
     background-position: center;
     background-repeat: no-repeat;
     margin-right: 20px;
+
+    cursor: pointer;
+
     z-index: 1;
     background-color: white;
     img {
@@ -128,7 +138,9 @@ nav {
     align-items: center;
 }
 
-ul.address-wrapper > li:first-child {
+ul.address-wrapper > li {
+  cursor: pointer;
+  &:first-child {
     position: relative;
     margin-left: 20px;
     width: 255px;
@@ -148,25 +160,25 @@ ul.address-wrapper > li:first-child {
         background-position: center;
         background-repeat: no-repeat;
     }
-}
-
-ul.address-wrapper > li:last-child {
+  }
+  &:last-child {
     position: relative;
     margin-left: 50px;
     font-size: 14px;
     color: #778089;
     font-weight: 300;
     &::before {
-        content: "";
-        width: 18px;
-        height: 18px;
-        position: absolute;
-        top: -3px;
-        left: -35px;
-        background-image: url(../img/search.svg);
-        background-position: center;
-        background-repeat: no-repeat;
+      content: "";
+      width: 18px;
+      height: 18px;
+      position: absolute;
+      top: -3px;
+      left: -35px;
+      background-image: url(../img/search.svg);
+      background-position: center;
+      background-repeat: no-repeat;
     }
+  }
 }
 
 .events {
@@ -174,41 +186,161 @@ ul.address-wrapper > li:last-child {
     display: flex;
     align-items: center;
     flex-direction: row;
-    flex-wrap: no-wrap;
-    justify-content: space-between;
     border-top: 1px solid #F7F7F7;
     position: relative;
     z-index: -2;
-
+    justify-content: left;
     overflow: hidden;
 }
 
-.events > ul {
+.events > div {
+    
+        // новое
+         min-height: 50px;
+        overflow-x: scroll;
+        overflow-y: hidden;
+        position: relative;
+        align-items: center;
+        width: 100%;}
+
+.events > div > ul {
     display: flex;
     flex-direction: row;
+
+  display: flex;
+    flex-direction: row;
+    position: absolute;
+    overflow: hidden;
+    white-space: nowrap;
+    justify-content: center;
+    align-items: center;
+    height: 30px;
+    top: 0;
+    left: 0;
+
 }
 
-.events > ul > li {
+.events > div > ul > li {
+
     margin-right: 20px;
+    cursor: pointer;
     a {
         font-size: 18px;
         font-weight: 500;
         text-decoration: none;
         color: #121314;
+        cursor: pointer;
     }
     &.drop-menu {
         position: relative;
         margin-right: 40px;
         &::after {
             content: "";
-            width: 10px;
-            height: 5px;
+            width: 15px;
+            height: 10px;
             position: absolute;
-            top: 5px;
+            top: 3px;
             right: -20px;
             background-image: url(../img/arrow-down.svg);
             background-position: center;
             background-repeat: no-repeat;
         }
     }
+}
+
+//
+.tic-cities-dropdown {
+    /*position: absolute;*/
+    z-index: 20000;
+   
+    width: 100%;
+  
+    top: 100%;
+    right: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+
+.tic-cities-input {
+    justify-content: left;
+    align-items: left;
+    display: flex;
+    position: relative;
+    box-sizing: content-box;
+}
+
+.tic-cities-tags-sm-box, .tic-cities-tags-sm-box>div {
+  display: flex;
+  height: 30px;
+  width: 100%;
+  scrollbar-width: none;
+}
+
+.tic-cities-tags-sm-box {
+    overflow: hidden;
+    margin-left: 10px;
+    margin-right: 10px;
+    box-sizing: content-box;
+    box-sizing: initial;
+}
+
+.tic-cities-tags-sm-box>div>ul.tic-cities-tags-sm-list {
+    display: flex;
+    flex-direction: row;
+    position: absolute;
+    overflow: hidden;
+    white-space: nowrap;
+    justify-content: center;
+    align-items: center;
+    // height: 30px;
+    height: 50px;
+    top: 0;
+    left: 0;
+}
+
+.tic-cities-tags-sm-list > li {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  margin-right: 20px;
+  cursor: pointer;
+  a {
+    font-size: 18px;
+    font-weight: 500;
+    text-decoration: none;
+    color: #121314;
+    cursor: pointer;
+  }
+  &.drop-menu {
+    position: relative;
+    margin-right: 40px;
+    &::after {
+      content: "";
+      width: 15px;
+      height: 10px;
+      position: absolute;
+      top: 3px;
+      right: -20px;
+      background-image: url(../img/arrow-down.svg);
+      background-position: center;
+      background-repeat: no-repeat;
+    }
+  }
+}
+   
+.tic-cities-tags-sm-box>div {
+    padding-bottom: 20px;
+    overflow-x: scroll;
+    overflow-y: hidden;
+    position: relative;
+    align-items: center;
+}
+
+.tic-cities-tags-sm-box, .tic-cities-tags-sm-box > div {
+    display: flex;
+    min-height: 50px;
+    width: 100%;
 }
