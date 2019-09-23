@@ -1,26 +1,67 @@
 
 /*==========  Desktop First  ==========*/
+@media only screen and (min-width : 1800px) {
+  // .tic-box {
+  //     width: 1420px;
+  // }
+  .address-wrapper {
+    justify-content: flex-start;
+  }
+  ul.address-wrapper > li:last-child {
+    margin-right: 0;
+    margin-left: 50px;
+    &::before {
+      left: -35px;
+    } 
+  }
+}
 @media only screen and (max-width : 1800px) {
 	// .tic-box {
 	//     width: 1420px;
 	// }
+  .address-wrapper {
+    justify-content: flex-start;
+  }
+  ul.address-wrapper > li:last-child {
+    margin-right: 0;
+    margin-left: 50px;
+    &::before {
+      left: -35px;
+    }
+  }
 }
+
+// ::before {
+//   left: 192px;
 
 @media only screen and (max-width : 1440px) {
 	// .tic-box {
 	// 	width: 1004px;
 	// }
+  
+  .address-wrapper {
+    // width: 100%;
+    justify-content: space-between;
+  }
+  ul.address-wrapper > li:last-child {
+    margin-left: 0;
+    margin-right: 33px;
+    &::before {
+      left: 175px;
+    }
+  }
 }
 
 @media only screen and (max-width : 1024px) {
 	// .tic-box {
 	// 	width: 748px;
 	// }
-    .address-wrapper {
-        // width: 100%;
-        justify-content: space-between;
-    }
-    .search {
+  .menu-logo {
+    // display: flex;
+    // justify-content: space-between;
+  }
+    
+  .search {
 		margin-left: 0;
 		margin-right: 40px;
 		&::before {
@@ -73,21 +114,22 @@
 		display: flex;
 		justify-content: space-between;
 	}
+  ul.address-wrapper > li:last-child {
+    margin-left: 0;
+    margin-right: 33px;
+    &::before {
+      left: 175px;
+    }
+  }
 	.sub-menu-wrapper {
 	    background-color: #ffffff;
 	}
 	.address-wrapper {
 	    padding: 10px 10px 0;
 	}
-	.sub-menu li img {
-		display: none;
-	}
 }
 
 @media only screen and (max-width : 640px) {
-	// .tic-box {
-	// 	width: 300px;
-	// }
 	.logo {
 	    width: 21px;
 	    height: 28px;
@@ -108,7 +150,11 @@
 		li {
 			padding-bottom: 15px;
 			&:last-child {
-			    margin-left: 33px;
+		    margin-left: 33px;
+        margin-right: 0;
+        &::before {
+          left: -35px;
+        }
 			}
 		}
 	}

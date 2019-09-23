@@ -126,16 +126,25 @@ nav {
     }
 }
 
-.menu-logo ul {
+.menu-logo {
+  display: flex;
+  flex-direction: row;
+  // justify-content: space-between;
+  ul {
     padding: 0;
     display: flex;
     flex-direction: row;
+  }
 }
 
 .address-wrapper {
     display: flex;
     flex-direction: row;
     align-items: center;
+
+    justify-content: space-between;
+    // border: 1px solid red;
+    width: calc(100% - 240px);
 }
 
 ul.address-wrapper > li {
