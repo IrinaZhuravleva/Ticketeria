@@ -157,7 +157,6 @@ ul.address-wrapper > li {
     font-size: 14px;
     color: #000;
     line-height: 1.2;
-    font-weight: 300;
     &::before {
         content: "";
         width: 11px;
@@ -175,7 +174,6 @@ ul.address-wrapper > li {
     margin-left: 50px;
     font-size: 14px;
     color: #778089;
-    font-weight: 300;
     &::before {
       content: "";
       width: 18px;
@@ -371,9 +369,7 @@ ul.address-wrapper > li {
     display: block;
     height: 100%;
     width: 20%;
-    background: linear-gradient(to left, #ffffff,transparent);
-    // вначале пишется позиция, от которой
-     // будет начинаться градиент, затем начальный и конечный цвет
+    background: linear-gradient(to left, #fff, #fff0);
     right: 0;
     bottom: 0;
     z-index: 30;
