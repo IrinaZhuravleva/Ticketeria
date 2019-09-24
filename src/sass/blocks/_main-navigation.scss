@@ -67,31 +67,31 @@ nav {
     position: relative;
     margin-left: 20px;
     &::before {
-        content: "";
-        width: 16px;
-        height: 10.48px;
-        position: absolute;
-        top: 0;
-        left: -22px;
-        background-image: url(../img/map.svg);
-        background-position: center;
-        background-repeat: no-repeat;
-      }
+      content: "";
+      width: 16px;
+      height: 10.48px;
+      position: absolute;
+      top: 0;
+      left: -22px;
+      background-image: url(../img/map.svg);
+      background-position: center;
+      background-repeat: no-repeat;
     }
-    &.lang {
-        position: relative;
-        &::before {
-            content: "";
-            width: 16px;
-            height: 10.48px;
-            position: absolute;
-            top: 0;
-            left: -22px;
-            background-image: url(../img/spain.png);
-            background-position: center;
-            background-repeat: no-repeat;
-        }
+  }
+  &.lang {
+    position: relative;
+    &::before {
+      content: "";
+      width: 16px;
+      height: 10.48px;
+      position: absolute;
+      top: 0;
+      left: -22px;
+      background-image: url(../img/spain.png);
+      background-position: center;
+      background-repeat: no-repeat;
     }
+  }
 }
 
 .sub-menu ul:nth-of-type(2) > li:nth-of-type(2) {
@@ -103,33 +103,39 @@ nav {
 }
 
 .menu-logo {
-    position: relative;
-    min-height: 58px;
+  position: relative;
+  min-height: 58px;
+  &::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: calc(100%-240px);
+    width: 100%;
+    width: calc(100% - 250px);
+    height: 1px;
+    background-color: #F7F7F7;
+  }
 }
 
 .logo {
-    position: relative;
-    width: 220px;
-    height: 44px;
-    background-image: url(../img/Logo_Ticketeria.svg);
-    background-position: center;
-    background-repeat: no-repeat;
-    margin-right: 20px;
-    align-self: flex-end;
-
-    cursor: pointer;
-
-    z-index: 1;
-    background-color: white;
-    img {
-        width: 100%;
-    }
+  position: relative;
+  width: 220px;
+  height: 44px;
+  background-image: url(../img/Logo_Ticketeria.svg);
+  background-position: center;
+  background-repeat: no-repeat;
+  margin-right: 20px;
+  align-self: flex-end;
+  cursor: pointer;
+  img {
+      width: 100%;
+  }
 }
 
 .menu-logo {
   display: flex;
   flex-direction: row;
-  // justify-content: space-between;
   ul {
     padding: 0;
     display: flex;
@@ -138,13 +144,11 @@ nav {
 }
 
 .address-wrapper {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-
-    justify-content: space-between;
-    // border: 1px solid red;
-    width: calc(100% - 240px);
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  width: calc(100% - 240px);
 }
 
 ul.address-wrapper > li {
@@ -158,15 +162,15 @@ ul.address-wrapper > li {
     color: #000;
     line-height: 1.2;
     &::before {
-        content: "";
-        width: 11px;
-        height: 16px;
-        position: absolute;
-        top: 8px;
-        left: -20px;
-        background-image: url(../img/pin.svg);
-        background-position: center;
-        background-repeat: no-repeat;
+      content: "";
+      width: 11px;
+      height: 16px;
+      position: absolute;
+      top: 8px;
+      left: -20px;
+      background-image: url(../img/pin.svg);
+      background-position: center;
+      background-repeat: no-repeat;
     }
   }
   &:last-child {
@@ -199,32 +203,24 @@ ul.address-wrapper > li {
 }
 
 .events {
-    min-height: 50px;
-    display: flex;
-    align-items: center;
-    flex-direction: row;
-    border-top: 1px solid #F7F7F7;
-    position: relative;
-    z-index: -2;
-    justify-content: left;
-    overflow: hidden;
+  min-height: 50px;
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  position: relative;
+  justify-content: left;
+  overflow: hidden;
 }
 
 .events > div {
-    
-        // новое
-         min-height: 50px;
-        overflow-x: scroll;
-        overflow-y: hidden;
-        position: relative;
-        align-items: center;
-        width: 100%;}
-
-.events > div > ul {
+  min-height: 50px;
+  overflow-x: scroll;
+  overflow-y: hidden;
+  position: relative;
+  align-items: center;
+  width: 100%;
+  &  > ul {
     display: flex;
-    flex-direction: row;
-
-  display: flex;
     flex-direction: row;
     position: absolute;
     overflow: hidden;
@@ -234,49 +230,44 @@ ul.address-wrapper > li {
     height: 30px;
     top: 0;
     left: 0;
-
+  }
 }
 
 .events > div > ul > li {
-
-    margin-right: 20px;
+  margin-right: 20px;
+  cursor: pointer;
+  a {
+    font-size: 18px;
+    font-weight: 500;
+    text-decoration: none;
+    color: #121314;
     cursor: pointer;
-    a {
-        font-size: 18px;
-        font-weight: 500;
-        text-decoration: none;
-        color: #121314;
-        cursor: pointer;
+  }
+  &.drop-menu {
+    position: relative;
+    margin-right: 40px;
+    &::after {
+      content: "";
+      width: 15px;
+      height: 10px;
+      position: absolute;
+      top: 3px;
+      right: -20px;
+      background-image: url(../img/arrow-down.svg);
+      background-position: center;
+      background-repeat: no-repeat;
     }
-    &.drop-menu {
-        position: relative;
-        margin-right: 40px;
-        &::after {
-            content: "";
-            width: 15px;
-            height: 10px;
-            position: absolute;
-            top: 3px;
-            right: -20px;
-            background-image: url(../img/arrow-down.svg);
-            background-position: center;
-            background-repeat: no-repeat;
-        }
-    }
+  }
 }
 
-//
 .tic-cities-dropdown {
-    /*position: absolute;*/
-    z-index: 20;
-   
-    width: 100%;
-  
-    top: 100%;
-    right: 0;
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
+  width: 100%;
+  top: 100%;
+  right: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  z-index: 20;
 }
 
 .tic-cities-input {
@@ -287,33 +278,32 @@ ul.address-wrapper > li {
     box-sizing: content-box;
 }
 
-.tic-cities-tags-sm-box, .tic-cities-tags-sm-box>div {
-  display: flex;
-  height: 30px;
-  width: 97%;
-  scrollbar-width: none;
-}
+// .tic-cities-tags-sm-box, .tic-cities-tags-sm-box > div {
+//   display: flex;
+//   height: 30px;
+//   width: 97%;
+//   scrollbar-width: none;
+// }
 
 .tic-cities-tags-sm-box {
-    overflow: hidden;
-    margin-left: 10px;
-    margin-right: 10px;
-    box-sizing: content-box;
-    box-sizing: initial;
+  overflow: hidden;
+  margin-left: 10px;
+  margin-right: 10px;
+  box-sizing: content-box;
+  box-sizing: initial;
 }
 
-.tic-cities-tags-sm-box>div>ul.tic-cities-tags-sm-list {
-    display: flex;
-    flex-direction: row;
-    position: absolute;
-    overflow: hidden;
-    white-space: nowrap;
-    justify-content: center;
-    align-items: center;
-    // height: 30px;
-    height: 50px;
-    top: 0;
-    left: 0;
+.tic-cities-tags-sm-box > div > ul.tic-cities-tags-sm-list {
+  display: flex;
+  flex-direction: row;
+  position: absolute;
+  overflow: hidden;
+  white-space: nowrap;
+  justify-content: center;
+  align-items: center;
+  height: 50px;
+  top: 0;
+  left: 0;
 }
 
 .tic-cities-tags-sm-list > li {
@@ -321,7 +311,6 @@ ul.address-wrapper > li {
   display: flex;
   justify-content: center;
   align-items: center;
-
   margin-right: 20px;
   cursor: pointer;
   a {
@@ -349,17 +338,18 @@ ul.address-wrapper > li {
 }
    
 .tic-cities-tags-sm-box>div {
-    padding-bottom: 20px;
-    overflow-x: scroll;
-    overflow-y: hidden;
-    position: relative;
-    align-items: center;
+  padding-bottom: 20px;
+  overflow-x: scroll;
+  overflow-y: hidden;
+  position: relative;
+  align-items: center;
 }
 
 .tic-cities-tags-sm-box, .tic-cities-tags-sm-box > div {
-    display: flex;
-    min-height: 50px;
-    width: 97%;
+  display: flex;
+  height: 50px;
+  width: 97%;
+  scrollbar-width: none;
 }
 
 .events{
