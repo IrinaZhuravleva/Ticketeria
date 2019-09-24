@@ -104,7 +104,6 @@ nav {
 
 .menu-logo {
     position: relative;
-    padding-top: 15px;
     min-height: 58px;
 }
 
@@ -116,6 +115,7 @@ nav {
     background-position: center;
     background-repeat: no-repeat;
     margin-right: 20px;
+    align-self: flex-end;
 
     cursor: pointer;
 
@@ -181,11 +181,21 @@ ul.address-wrapper > li {
       width: 18px;
       height: 18px;
       position: absolute;
-      top: -3px;
+      top: 0px;
       left: -35px;
       background-image: url(../img/search.svg);
       background-position: center;
       background-repeat: no-repeat;
+    }
+    input {
+      width: 162px;
+      height: 20px;
+      font-family: 'Gotham Pro', sans-serif;
+      font-size: 14px;
+      color: #000;
+      line-height: 1.2;
+      outline: none!important;
+      border-width: 0px;
     }
   }
 }
@@ -260,7 +270,7 @@ ul.address-wrapper > li {
 //
 .tic-cities-dropdown {
     /*position: absolute;*/
-    z-index: 20000;
+    z-index: 20;
    
     width: 100%;
   
@@ -282,7 +292,7 @@ ul.address-wrapper > li {
 .tic-cities-tags-sm-box, .tic-cities-tags-sm-box>div {
   display: flex;
   height: 30px;
-  width: 100%;
+  width: 97%;
   scrollbar-width: none;
 }
 
@@ -351,5 +361,34 @@ ul.address-wrapper > li {
 .tic-cities-tags-sm-box, .tic-cities-tags-sm-box > div {
     display: flex;
     min-height: 50px;
-    width: 100%;
+    width: 97%;
+}
+
+.events{
+  &::after {
+    content: "";
+    position: absolute;
+    display: block;
+    height: 100%;
+    width: 20%;
+    background: linear-gradient(to left, #ffffff,transparent);
+    // вначале пишется позиция, от которой
+     // будет начинаться градиент, затем начальный и конечный цвет
+    right: 0;
+    bottom: 0;
+    z-index: 30;
+  }
+  &::before {
+    content: "";
+    width: 15px;
+    height: 10px;
+    position: absolute;
+    top: 19px;
+    right: 20px;
+    background-image: url(../img/arrow-down.svg);
+    transform: rotate(-90deg);
+    background-position: center;
+    background-repeat: no-repeat;
+    z-index: 40;
+  }
 }
