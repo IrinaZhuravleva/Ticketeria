@@ -83,7 +83,6 @@ gulp.task('styles', function() {
 	.pipe(sourcemaps.init())
 	.pipe(sass())
 	.pipe(autoprefixer({
-		browsers: ['last 6 versions'],
 		cascade: false
 	}))
 	.pipe(sourcemaps.write())
