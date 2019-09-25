@@ -11,6 +11,9 @@ html {
 body {
     margin: 0;
     font-family: 'Gotham Pro', sans-serif;
+    
+    -webkit-font-smoothing: antialiased;
+    transform: translate3d(0, 0, 0);
 }
 
 ul {

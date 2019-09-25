@@ -62,6 +62,7 @@ nav {
   cursor: pointer;
   &:nth-of-type(2) {
     margin: 0 20px;
+    margin: 0 22px;
   }
   &.map {
     position: relative;
@@ -71,8 +72,8 @@ nav {
       width: 16px;
       height: 10.48px;
       position: absolute;
-      top: 0;
-      left: -22px;
+      top: 1px;
+      left: -20px;
       background-image: url(../img/map.svg);
       background-position: center;
       background-repeat: no-repeat;
@@ -105,6 +106,8 @@ nav {
 .menu-logo {
   position: relative;
   min-height: 58px;
+
+  margin-bottom: 2px;
   &::after {
     content: "";
     position: absolute;
@@ -161,17 +164,23 @@ ul.address-wrapper > li {
     font-size: 14px;
     color: #000;
     line-height: 1.2;
-    &::before {
-      content: "";
-      width: 11px;
-      height: 16px;
+    i.fa.fa-map-marker {
       position: absolute;
-      top: 8px;
-      left: -20px;
-      background-image: url(../img/pin.svg);
-      background-position: center;
-      background-repeat: no-repeat;
+      top: 7px;
+      left: -19px;
+      font-size: 18px;
     }
+    // &::before {
+    //   content: "";
+    //   width: 11px;
+    //   height: 16px;
+    //   position: absolute;
+    //   top: 8px;
+    //   left: -20px;
+    //   background-image: url(../img/pin.svg);
+    //   background-position: center;
+    //   background-repeat: no-repeat;
+    // }
   }
   &:last-child {
     position: relative;
@@ -233,8 +242,46 @@ ul.address-wrapper > li {
   }
 }
 
-.events > div > ul > li {
-  margin-right: 20px;
+// .events > div > ul > li {
+//   position: relative;
+//   display: flex;
+//   justify-content: center;
+//   align-items: center;
+//   // margin-right: 20px;
+//   margin-right: 52px;
+//   cursor: pointer;
+//   cursor: pointer;
+//   a {
+//     font-size: 18px;
+//     font-weight: 500;
+//     text-decoration: none;
+//     color: #121314;
+//     cursor: pointer;
+//   }
+//   &.drop-menu {
+//     position: relative;
+//     margin-right: 40px;
+//     &::after {
+//       content: "";
+//       width: 15px;
+//       height: 10px;
+//       position: absolute;
+//       top: 3px;
+//       right: -20px;
+//       background-image: url(../img/arrow-down.svg);
+//       background-position: center;
+//       background-repeat: no-repeat;
+//     }
+//   }
+// }
+
+.tic-cities-tags-sm-list > li {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  // margin-right: 20px;
+  margin-right: 31px;
   cursor: pointer;
   a {
     font-size: 18px;
@@ -245,14 +292,14 @@ ul.address-wrapper > li {
   }
   &.drop-menu {
     position: relative;
-    margin-right: 40px;
+    margin-right: 53px;
     &::after {
       content: "";
       width: 15px;
       height: 10px;
       position: absolute;
       top: 3px;
-      right: -20px;
+      right: -23px;
       background-image: url(../img/arrow-down.svg);
       background-position: center;
       background-repeat: no-repeat;
@@ -306,39 +353,10 @@ ul.address-wrapper > li {
   left: 0;
 }
 
-.tic-cities-tags-sm-list > li {
-  position: relative;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin-right: 20px;
-  cursor: pointer;
-  a {
-    font-size: 18px;
-    font-weight: 500;
-    text-decoration: none;
-    color: #121314;
-    cursor: pointer;
-  }
-  &.drop-menu {
-    position: relative;
-    margin-right: 40px;
-    &::after {
-      content: "";
-      width: 15px;
-      height: 10px;
-      position: absolute;
-      top: 3px;
-      right: -20px;
-      background-image: url(../img/arrow-down.svg);
-      background-position: center;
-      background-repeat: no-repeat;
-    }
-  }
-}
+
    
 .tic-cities-tags-sm-box>div {
-  padding-bottom: 20px;
+  // padding-bottom: 20px;
   overflow-x: scroll;
   overflow-y: hidden;
   position: relative;
@@ -350,6 +368,11 @@ ul.address-wrapper > li {
   height: 50px;
   width: 97%;
   scrollbar-width: none;
+  &::-webkit-scrollbar {
+    width: 0px;
+    height: 0px;
+    display: none;
+  }
 }
 
 .events{
