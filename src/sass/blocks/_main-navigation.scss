@@ -18,7 +18,7 @@
 }
 
 nav {
-    // box-shadow: 0px 6px 16px rgba(0, 0, 0, 0.06);
+    box-shadow: 0px 6px 16px rgba(0, 0, 0, 0.06);
 }
 
 // .tic-box {
@@ -69,7 +69,7 @@ nav {
     &::before {
       content: "";
       width: 16px;
-      height: 10.48px;
+      height: 16px;
       position: absolute;
       top: 1px;
       left: -20px;
@@ -291,7 +291,7 @@ ul.address-wrapper > li {
 //   }
 // }
 
-.tic-cities-tags-sm-list > li {
+.menu-scroll-box-list > li {
   position: relative;
   display: flex;
   justify-content: center;
@@ -325,7 +325,7 @@ ul.address-wrapper > li {
   }
 }
 
-.tic-cities-dropdown {
+.events-dropdown {
   width: 100%;
   top: 100%;
   right: 0;
@@ -335,7 +335,7 @@ ul.address-wrapper > li {
   z-index: 20;
 }
 
-.tic-cities-input {
+.menu-scroll-wrapper {
     justify-content: left;
     align-items: left;
     display: flex;
@@ -343,14 +343,14 @@ ul.address-wrapper > li {
     box-sizing: content-box;
 }
 
-// .tic-cities-tags-sm-box, .tic-cities-tags-sm-box > div {
+// .menu-scroll-box, .menu-scroll-box > div {
 //   display: flex;
 //   height: 30px;
 //   width: 97%;
 //   scrollbar-width: none;
 // }
 
-.tic-cities-tags-sm-box {
+.menu-scroll-box {
   overflow: hidden;
   margin-left: 10px;
   margin-right: 10px;
@@ -358,7 +358,7 @@ ul.address-wrapper > li {
   box-sizing: initial;
 }
 
-.tic-cities-tags-sm-box > div > ul.tic-cities-tags-sm-list {
+.menu-scroll-box > div > ul.menu-scroll-box-list {
   display: flex;
   flex-direction: row;
   position: absolute;
@@ -372,7 +372,7 @@ ul.address-wrapper > li {
   left: 0;
 }
    
-.tic-cities-tags-sm-box>div {
+.menu-scroll-box>div {
   // padding-bottom: 20px;
   overflow-x: scroll;
   overflow-y: hidden;
@@ -386,7 +386,7 @@ ul.address-wrapper > li {
   }
 }
 
-.tic-cities-tags-sm-box, .tic-cities-tags-sm-box > div {
+.menu-scroll-box, .menu-scroll-box > div {
   display: flex;
   height: 50px;
   width: 97%;
