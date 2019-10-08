@@ -1,7 +1,7 @@
-.tic-cities-dropdown {
-  right: auto;
-  margin-top: 11px;
-}
+// .tic-cities-dropdown {
+//   right: auto;
+//   margin-top: 11px;
+// }
 
 .tic-cities-dropdown {
   position: absolute;
@@ -34,7 +34,11 @@
   height: 42px;
   width: calc(100% - 20px);
   scrollbar-width: none;
-  align-items: center;
+  &::-webkit-scrollbar {
+    width: 0px;
+    height: 0px;
+    display: none;
+  }
 }
 
 .tic-cities-tags-sm-box {
@@ -60,7 +64,7 @@
   overflow: hidden;
   justify-content: center;
   align-items: center;
-  top: 19px;
+  top: 12px;
   left: 0;
 }
 
@@ -152,18 +156,31 @@
 
 .tic-cities-scroll {
   width: 100%;
-  float: left;
+  // float: left;
   max-height: 288px;
   overflow: hidden;
   overflow-y: scroll;
-  scrollbar-width: none;
-  scrollbar-track-color: grey;
-  // ::-webkit-scrollbar-track: grey;
-  scrollbar-face-color: red;
-  // ::-webkit-scrollbar-track-piece: red;
+  // scrollbar-width: none;
   .tic-cities-options p,
   .tic-cities-options div {
     margin: 0 20px 0 10px;
+  }
+}
+
+.tic-cities-scroll {
+  &::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+    border-radius: 10px;
+  }
+
+    &::-webkit-scrollbar {
+      width: 5px;
+    }
+
+    &::-webkit-scrollbar-thumb {
+      border-radius: 5px;
+      background-color: #ED1F24;
+   
   }
 }
 
